@@ -301,6 +301,10 @@ header {
 		background-color: var(--transition_bgc);
 	}
 
+	.balance-tracker {
+	background-color: var(--transition_bgc);
+}
+
 	.history {
 		border-left: 2px solid var(--font-color);
 		border-bottom: 10px solid var(--font-color);
