@@ -19,6 +19,8 @@ const text = document.getElementById("text");
 const amount = document.getElementById("amount");
 const spentBtn = document.getElementById("spentBtn");
 const balanceDigit = document.getElementById("balanceDigit");
+const deleteAll = document.getElementById("deleteAll");
+
 // <-----
 
 // Necessary functions --->
@@ -113,11 +115,20 @@ const Init = () => {
 
 // Adding event listeners --->
 form.addEventListener("submit", addTransaction);
+
 spentBtn.addEventListener("click", (event) => {
 	event.preventDefault();
 	spentClick = 1;
 	console.log(spentClick);
 	addTransaction(event);
+});
+
+deleteAll.addEventListener("click", () => {
+	if (confirm("All the transaction data will be deleted parmanently")) {
+		localStorage.clear();
+		window.location.reload();
+		Init();
+	}
 });
 // <-----
 
