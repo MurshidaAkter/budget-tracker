@@ -38,7 +38,7 @@ body {
 h2 {
 	text-align: center;
 	border-bottom: 0.5px dashed var(--font-color);
-	margin: 1rem 2rem 1rem 2rem;
+	margin: 1rem 1rem 1rem 2rem;
 }
 
 label {
@@ -122,16 +122,6 @@ header {
 	font-size: 1.5rem;
 }
 
-/* .reset-btn {
-  position: absolute;
-  top: 6rem;
-  right: 1rem;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: var(--pantone);
-  color: rgb(255, 219, 204);
-} */
-
 #balanceDigit {
 	font-size: 2.5rem;
 	color: var(--transition_bgc);
@@ -208,10 +198,23 @@ header {
 	background-color: var(--history-bgc);
 }
 
+.reset {
+	display: flex;
+	justify-content: end;
+}
+
+.reset-btn {
+	/* position: absolute;
+	right: 1rem;
+	top: 32%; */
+	padding: 7px 15px;
+	border-radius: 5px;
+	background-color: var(--button-color);
+	color: var(--font-color);
+}
+
 .list {
 	list-style-type: none;
-	padding-top: 0.1rem;
-	/* padding: 0 1rem; */
 	margin-bottom: 40px;
 }
 
@@ -265,6 +268,11 @@ header {
 /* Responsiveness ---> */
 
 @media only screen and (min-width: 912px) {
+	.conatiner > div,
+	header {
+		padding: 1rem 4rem;
+	}
+
 	.balance-div {
 		display: flex;
 		justify-content: space-between;
@@ -287,12 +295,19 @@ header {
 	/* ---- */
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	body {
 		padding: 0 15rem;
 		background-color: var(--transition_bgc);
 	}
 
+	.history {
+		border-left: 2px solid var(--font-color);
+		border-bottom: 10px solid var(--font-color);
+	}
+}
+
+@media only screen and (min-width: 1280px) {
 	header {
 		border-bottom: 4px solid var(--font-color);
 	}
@@ -304,18 +319,6 @@ header {
 	.sub-title {
 		font-size: 1.5rem;
 	}
-	/* .balance-div {
-		display: flex;
-		justify-content: space-around;
-		flex: 1;
-		align-items: center;
-
-		padding: 3rem;
-	}
-
-	.balance-tracker {
-		width: 70%;
-	} */
 
 	/* history --- */
 	.list {
