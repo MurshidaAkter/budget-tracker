@@ -20,7 +20,6 @@ const amount = document.getElementById("amount");
 const spentBtn = document.getElementById("spentBtn");
 const balanceDigit = document.getElementById("balanceDigit");
 const deleteAll = document.getElementById("deleteAll");
-
 // <-----
 
 // Necessary functions --->
@@ -67,7 +66,9 @@ const createTransactionList = (transaction) => {
 	item.classList.add(transaction.amount < 0 ? "minus" : "plus");
 
 	item.innerHTML = `
-    ${transaction.text} <span>${sign}${Math.abs(transaction.amount)}</span>
+    ${transaction.text} <span class="numbers">${sign}${Math.abs(
+		transaction.amount
+	)}</span>
     <button class="delete-btn" onclick="removeTransaction(${
 			transaction.id
 		})"><i class="fa-solid fa-trash"></i></button>
